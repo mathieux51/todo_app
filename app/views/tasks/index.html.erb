@@ -1,0 +1,13 @@
+<h1>To-Do List</h1>
+<%= link_to "New Task", new_task_path, class: "btn btn-primary" %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.title %> - <%= task.completed ? "✅" : "❌" %>
+      <%= link_to "Edit", edit_task_path(task) %> |
+      <%= link_to "Show", task_path(task) %> |
+      <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
