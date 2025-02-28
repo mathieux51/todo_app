@@ -1,6 +1,9 @@
 # Default values for todo.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+env:
+  - name: SECRET_KEY_BASE
+    value: "foobar"
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1
